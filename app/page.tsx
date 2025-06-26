@@ -21,11 +21,12 @@ import {
   Menu,
   X,
 } from "lucide-react"
+import Image from "next/image"
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState("home")
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [mousePosition] = useState({ x: 0, y: 0 })
 
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0)
   const [displayedText, setDisplayedText] = useState("")
@@ -305,7 +306,7 @@ export default function Portfolio() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.8 }}
                 >
-                  Hi, I'm{" "}
+                  Hi, I&apos;m{" "}
                   <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                     Ayush
                   </span>
@@ -413,12 +414,12 @@ export default function Portfolio() {
                         Bhilai.
                       </p>
                       <p>
-                        My journey in tech started when I built my first website at 19, and since then, I've been
+                        My journey in tech started when I built my first website at 19, and since then, I&apos;ve been
                         fascinated by the endless possibilities of code. I love working on projects that challenge me to
                         think creatively and solve real-world problems.
                       </p>
                       <p>
-                        When I'm not coding, you can find me hiking, playing guitar, or exploring new coffee shops
+                        When I&apos;m not coding, you can find me hiking, playing guitar, or exploring new coffee shops
                         around campus.
                       </p>
                     </div>
@@ -574,10 +575,12 @@ export default function Portfolio() {
                     >
                       <Card className="bg-white/5 border-white/10 backdrop-blur-lg overflow-hidden h-full hover:bg-white/10 transition-all duration-300">
                         <div className="relative overflow-hidden">
-                          <img
+                          <Image
                             src={project.image || "/placeholder.svg"}
                             alt={project.title}
                             className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                            width={500}
+                            height={300}
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                         </div>
@@ -642,7 +645,7 @@ export default function Portfolio() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
                 >
-                  Let's{" "}
+                  Let&apos;s{" "}
                   <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                     Connect
                   </span>
@@ -654,7 +657,7 @@ export default function Portfolio() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
                 >
-                  I'm always excited to collaborate on interesting projects or discuss new opportunities. Feel free to
+                  I&apos;m always excited to collaborate on interesting projects or discuss new opportunities. Feel free to
                   reach out!
                 </motion.p>
 
@@ -683,7 +686,7 @@ export default function Portfolio() {
                       value: "Ayush Kumar Das",
                       href: "https://www.linkedin.com/in/ayush-kumar-das",
                     },
-                  ].map((contact, index) => (
+                  ].map((contact) => (
                     <motion.a
                       key={contact.label}
                       href={contact.href}
