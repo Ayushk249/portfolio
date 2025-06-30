@@ -135,7 +135,7 @@ export default function Portfolio() {
     {
       title: "EdgeTable",
       description: "A spreadsheet like data management tool to store, track and organize information about anything",
-      image: "../public/proj1.png",
+      image: "/proj1.png",
       tags: ["Next.js", "PostgreSQL", "Tailwind CSS", "tRPC", "Prisma ORM"],
       github: "https://github.com/Ayushk249/EdgeTable",
       live: "#",
@@ -144,7 +144,7 @@ export default function Portfolio() {
       title: "Productlance",
       description:
         "A REST API based eCommerce Web application handling all basic functionalities like cart functionality, checkout functionality, Product reviews",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/globe.svg",
       tags: ["MongoDB", "Express.js", "React", "Node.js"],
       github: "https://github.com/Ayushk249/Productlance",
       live: "#",
@@ -152,17 +152,17 @@ export default function Portfolio() {
     {
       title: "Official Website of Meraz'22",
       description: "A Lightning fast static site generated with Svelte Kit framework",
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/favicon.png?height=300&width=400",
       tags: ["SvelteKit", "SCSS"],
-      github: "https://github.com/Ayushk249/Meraz-IITBhilai",
+      github: "https://github.com/Ayushk249/meraz22",
       live: "#",
     },
     {
       title: "Room Furniture Display",
       description: "Frontend mentor room-homepage challenge to develop a minimalistic static UI",
-      image: "/placeholder.svg?height=300&width=400",
-      tags: ["HTML", "Tailwind CSS"],
-      github: "https://github.com/Ayushk249",
+      image: "/proj4.png?height=300&width=400",
+      tags: ["HTML", "Tailwind CSS",'React'],
+      github: "https://github.com/Ayushk249/room-homepage-frontend",
       live: "#",
     },
   ]
@@ -576,7 +576,7 @@ export default function Portfolio() {
                       <Card className="bg-white/5 border-white/10 backdrop-blur-lg overflow-hidden h-full hover:bg-white/10 transition-all duration-300">
                         <div className="relative overflow-hidden">
                           <Image
-                            src={project.image || "/placeholder.svg"}
+                            src={project.image}
                             alt={project.title}
                             className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                             width={500}
